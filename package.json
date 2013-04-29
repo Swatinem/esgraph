@@ -1,0 +1,24 @@
+{
+  "name": "",
+  "description": "",
+  "keywords": [],
+  "main": "./index",
+  "version": "0.0.1",
+  "maintainers": [
+    "Arpad Borsos <arpad.borsos@googlemail.com> (http://swatinem.de)"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "jscoverage": "*",
+    "coveralls": "*",
+    "mocha-lcov-reporter": "*"
+  },
+  "scripts": {
+    "test": "make test-coveralls"
+  },
+  "repository": "git://github.com/Swatinem/.git",
+  "license": "LGPLv3"
+}
