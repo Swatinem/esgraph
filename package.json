@@ -1,15 +1,17 @@
 {
-  "name": "",
-  "description": "",
-  "keywords": [],
+  "name": "esgraph",
+  "description": "creates a control flow graph from an esprima abstract syntax tree",
+  "keywords": ["AST", "abstract syntax tree", "esprima", "CFG", "control flow graph"],
   "main": "./index",
   "version": "0.0.1",
   "maintainers": [
     "Arpad Borsos <arpad.borsos@googlemail.com> (http://swatinem.de)"
   ],
   "dependencies": {
+    "walkes": "~ 0.0"
   },
   "devDependencies": {
+    "esprima": "~ 1.0",
     "mocha": "*",
     "should": "*",
     "jscoverage": "*",
@@ -19,6 +21,6 @@
   "scripts": {
     "test": "make test-coveralls"
   },
-  "repository": "git://github.com/Swatinem/.git",
+  "repository": "git://github.com/Swatinem/esgraph.git",
   "license": "LGPLv3"
 }
