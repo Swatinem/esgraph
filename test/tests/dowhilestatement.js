@@ -1,7 +1,7 @@
 // should handle do-while loops
 /*
 n0 [label="entry"]
-n1 [label="empty;"]
+n1 [label="empty"]
 n2 [label="false"]
 n2 -> n1 [label="true"]
 n3 [label="exit"]

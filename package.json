@@ -8,7 +8,8 @@
     "Arpad Borsos <arpad.borsos@googlemail.com> (http://swatinem.de)"
   ],
   "dependencies": {
-    "walkes": "~ 0.0"
+    "walkes": "~ 0.1.0",
+    "es6-shim": "~ 0.7.0"
   },
   "devDependencies": {
     "esprima": "~ 1.0",

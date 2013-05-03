@@ -1,9 +1,9 @@
 // should handle function calls and new statements that might throw
 /*
 n0 [label="entry"]
-n1 [label="1 && call();"]
-n2 [label="new klass();"]
-n3 [label="statement;"]
+n1 [label="1 && call()"]
+n2 [label="new klass()"]
+n3 [label="statement"]
 n4 [label="exit"]
 n3 -> n4 [label="normal"]
 n2 -> n3 [label="normal"]

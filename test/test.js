@@ -38,7 +38,7 @@ function printGraph(cfg, source) {
 	function printNode(node) {
 		if (nodeCounter.has(node))
 			return;
-		var counter = nodeCounter.keys.length;
+		var counter = nodeCounter.size;
 		nodeCounter.set(node, counter);
 
 		var label = node.type || 
@@ -57,23 +57,3 @@ function printGraph(cfg, source) {
 		});
 	}
 }
-
-// FIXME: do not copy-paste this around, find a proper place for it
-function Map() {
-	this.keys = [];
-	this.values = [];
-}
-Map.prototype.has = function Map_has(key) {
-	return ~this.keys.indexOf(key);
-};
-Map.prototype.get = function Map_get(key) {
-	var index = this.keys.indexOf(key);
-	return this.values[index];
-};
-Map.prototype.set = function Map_set(key, value) {
-	var index = this.keys.indexOf(key);
-	if (~index)
-		return this.values[index] = value;
-	this.keys.push(key);
-	this.values.push(value);
-};
