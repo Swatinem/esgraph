@@ -3,7 +3,7 @@
   "description": "creates a control flow graph from an esprima abstract syntax tree",
   "keywords": ["AST", "abstract syntax tree", "esprima", "CFG", "control flow graph"],
   "main": "./index",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "maintainers": [
     "Arpad Borsos <arpad.borsos@googlemail.com> (http://swatinem.de)"
   ],
