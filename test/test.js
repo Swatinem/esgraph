@@ -15,6 +15,8 @@ function createTest(dir, file) {
 		var cfg = esgraph(ast);
 		var expected = comments[1].value.trim();
 		var actual = printGraph(cfg, contents).trim();
+		if (actual !== expected)
+			console.log(actual);
 		actual.should.eql(expected);
 	});
 }
