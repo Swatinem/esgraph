@@ -27,6 +27,11 @@ describe('esgraph', function () {
 	files.forEach(function (file) {
 		createTest(dir, file);
 	});
+
+	it('should handle long graphs', function () {
+		var ast = esprima.parse(Array(1e4).join('stmt;'));
+		var cfg = esgraph(ast);
+	});
 });
 
 // TODO: how sophisticated should this be?
