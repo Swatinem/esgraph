@@ -1,10 +1,10 @@
 // should handle returns
 /*
-n0 [label="entry"]
+n0 [label="entry", style="rounded"]
 n1 [label="return a;"]
-n2 [label="exit"]
-n1 -> n2 [label="normal"]
-n0 -> n1 [label="normal"]
+n2 [label="exit", style="rounded"]
+n0 -> n1 []
+n1 -> n2 []
 */
 function t() {
 	return a;

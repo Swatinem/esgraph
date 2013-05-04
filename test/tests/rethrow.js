@@ -1,18 +1,18 @@
 // should handle try/catch with rethrow
 /*
-n0 [label="entry"]
+n0 [label="entry", style="rounded"]
 n1 [label="statement"]
 n2 [label="throw e;"]
-n3 [label="catch (e) {\n    rethrow;\n    throw e;\n}"]
+n3 [label="catch (e)"]
 n4 [label="rethrow"]
 n5 [label="throw e;"]
-n6 [label="exit"]
-n5 -> n6 [label="exception"]
-n4 -> n5 [label="normal"]
-n3 -> n4 [label="normal"]
-n2 -> n3 [label="exception"]
-n1 -> n2 [label="normal"]
-n0 -> n1 [label="normal"]
+n6 [label="exit", style="rounded"]
+n0 -> n1 []
+n1 -> n2 []
+n2 -> n3 [color="red", label="exception"]
+n3 -> n4 []
+n4 -> n5 []
+n5 -> n6 [color="red", label="exception"]
 */
 try {
 	statement;
