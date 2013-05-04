@@ -30,7 +30,7 @@ describe('esgraph', function () {
 
 	it('should handle long graphs', function () {
 		var source = Array(1e4).join('stmt;');
-		var ast = esprima.parse(source, {range: true});
+		var ast = esprima.parse(source);
 		var cfg = esgraph(ast);
 		var dot = esgraph.dot(cfg);
 	});
