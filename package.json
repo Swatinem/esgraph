@@ -1,17 +1,20 @@
 {
   "name": "esgraph",
   "description": "creates a control flow graph from an esprima abstract syntax tree",
+  "version": "0.1.0",
   "keywords": ["AST", "abstract syntax tree", "esprima", "CFG", "control flow graph"],
   "main": "./index",
-  "version": "0.1.0",
+  "bin": {
+    "esgraph": "./bin/esgraph.js"
+  },
   "maintainers": [
     "Arpad Borsos <arpad.borsos@googlemail.com> (http://swatinem.de)"
   ],
   "dependencies": {
+    "esprima": "~ 1.0",
     "walkes": "~ 0.1.0"
   },
   "devDependencies": {
-    "esprima": "~ 1.0",
     "mocha": "*",
     "should": "*",
     "jscoverage": "*",

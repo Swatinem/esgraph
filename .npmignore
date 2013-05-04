@@ -8,3 +8,4 @@ npm-debug.log
 test
 Makefile
 .travis.yml
+esgraph.png
