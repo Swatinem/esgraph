@@ -1,7 +1,7 @@
 {
   "name": "esgraph",
   "description": "creates a control flow graph from an esprima abstract syntax tree",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": ["AST", "abstract syntax tree", "esprima", "CFG", "control flow graph"],
   "main": "./index",
   "bin": {
@@ -12,7 +12,7 @@
   ],
   "dependencies": {
     "esprima": "~ 1.0",
-    "walkes": "~ 0.1.0"
+    "walkes": "~ 0.2.0"
   },
   "devDependencies": {
     "mocha": "*",
@@ -22,7 +22,7 @@
     "mocha-lcov-reporter": "*"
   },
   "scripts": {
-    "test": "make test-coveralls"
+    "test": "make test && make test-coveralls"
   },
   "repository": "git://github.com/Swatinem/esgraph.git",
   "license": "LGPLv3"
