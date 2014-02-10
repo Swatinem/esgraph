@@ -48,9 +48,9 @@ process.stdin.on('end', function () {
 
 function findFunctions(ast) {
 	var functions = [];
-	function handleFunction(recurse) {
-		functions.push(this);
-		recurse(this.body);
+	function handleFunction(node, recurse, stop) {
+		functions.push(node);
+		recurse(node.body);
 	}
 	walkes(ast, {
 		FunctionDeclaration: handleFunction,
