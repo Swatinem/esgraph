@@ -1,19 +1,11 @@
-test:
-	@echo TRAVIS_JOB_ID $(TRAVIS_JOB_ID)
-	NODE_ENV=test ./node_modules/.bin/mocha
+test: lint
+	NODE_ENV=test node --harmony ./node_modules/.bin/istanbul cover \
+		./node_modules/mocha/bin/_mocha
 
-lib-cov: clean-cov
-	./node_modules/.bin/jscoverage lib lib-cov
+lint:
+	-./node_modules/.bin/jshint ./test/test.js ./lib ./index.js
 
-clean-cov:
-	rm -rf lib-cov
+test-coveralls: test
+	-cat ./coverage/lcov.info | ./node_modules/.bin/coveralls
 
-test-cov: lib-cov
-	@echo TRAVIS_JOB_ID $(TRAVIS_JOB_ID)
-	ESGRAPH_COV=1 NODE_ENV=test ./node_modules/.bin/mocha -R html-cov 1> coverage.html
-
-test-coveralls: lib-cov
-	@echo TRAVIS_JOB_ID $(TRAVIS_JOB_ID)
-	ESGRAPH_COV=1 NODE_ENV=test ./node_modules/.bin/mocha -R mocha-lcov-reporter | ./node_modules/.bin/coveralls
-
-.PHONY: test test-cov test-coveralls clean-cov
+.PHONY: test lint test-coveralls

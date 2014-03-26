@@ -2,7 +2,6 @@
 var esgraph = require('../');
 var esprima = require('esprima');
 var fs = require('fs');
-var walkes = require('walkes');
 
 function createTest(dir, file) {
 	var contents = fs.readFileSync(dir + file, 'utf8');
@@ -32,7 +31,7 @@ describe('esgraph', function () {
 		var source = Array(1e4).join('stmt;');
 		var ast = esprima.parse(source);
 		var cfg = esgraph(ast);
-		var dot = esgraph.dot(cfg);
+		esgraph.dot(cfg);
 	});
 });
 

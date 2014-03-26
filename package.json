@@ -15,14 +15,14 @@
     "walkes": "~ 0.2.0"
   },
   "devDependencies": {
+    "istanbul": "*",
     "mocha": "*",
     "should": "*",
-    "jscoverage": "*",
     "coveralls": "*",
-    "mocha-lcov-reporter": "*"
+    "jshint": "*"
   },
   "scripts": {
-    "test": "make test && make test-coveralls"
+    "test": "make test-coveralls"
   },
   "repository": "git://github.com/Swatinem/esgraph.git",
   "license": "LGPLv3"
