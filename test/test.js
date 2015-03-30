@@ -24,7 +24,9 @@ describe('esgraph', function () {
 	var dir = __dirname + '/tests/';
 	var files = fs.readdirSync(dir);
 	files.forEach(function (file) {
-		createTest(dir, file);
+		if(/.js$/.test(file)){
+			createTest(dir, file);
+		}
 	});
 
 	it('should handle long graphs', function () {
