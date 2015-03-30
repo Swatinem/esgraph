@@ -40,7 +40,7 @@ describe('esgraph', function () {
 describe('esgraph.dot', function () {
 	it('should number the nodes starting at `counter`', function () {
 		var out = esgraph.dot(esgraph(esprima.parse('var a;')), {counter: 10});
-		out.should.not.include('n0');
-		out.should.include('n10');
+		out.should.not.containEql('n0');
+		out.should.containEql('n10');
 	});
 });
