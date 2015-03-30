@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var esprima = require('esprima');
+var espree = require('espree');
 var walkes = require('walkes');
 var esgraph = require('../');
 
@@ -19,7 +19,7 @@ process.stdin.on('end', function () {
 	}
 
 	try {
-		var ast = esprima.parse(source, {range: true});
+		var ast = espree.parse(source, {range: true});
 		var functions = findFunctions(ast);
 
 		console.log('digraph cfg {');
@@ -48,7 +48,7 @@ process.stdin.on('end', function () {
 
 function findFunctions(ast) {
 	var functions = [];
-	function handleFunction(node, recurse, stop) {
+	function handleFunction(node, recurse) {
 		functions.push(node);
 		recurse(node.body);
 	}
