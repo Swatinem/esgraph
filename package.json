@@ -11,7 +11,7 @@
     "Arpad Borsos <arpad.borsos@googlemail.com> (http://swatinem.de)"
   ],
   "dependencies": {
-    "esprima": "~ 1.0",
+    "espree": "~ 1.12.3",
     "walkes": "~ 0.2.0"
   },
   "devDependencies": {
