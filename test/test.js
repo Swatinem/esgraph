@@ -35,6 +35,18 @@ describe('esgraph', function () {
 		var cfg = esgraph(ast);
 		esgraph.dot(cfg);
 	});
+
+	it('should omit implicit exception edges when omitExceptions option is set', function () {
+		var contents = fs.readFileSync(dir + "basicblocks.js", 'utf8');
+		var ast = espree.parse(contents, {comment: true, range: true});
+		delete ast.comments;
+
+		var cfg = esgraph(ast);
+		cfg[1].prev.length.should.equal(2);
+
+		cfg = esgraph(ast, {omitExceptions: true});
+		cfg[1].prev.length.should.equal(1);
+	});
 });
 
 describe('esgraph.dot', function () {

@@ -26,7 +26,11 @@ To create a png file showing the CFG of a js file:
 ```js
 var esgraph = require('esgraph');
 
-var cfg = esgraph(esprima.parse(source, {range: true}));
+var cfg = esgraph(esprima.parse(source, {range: true}), {
+        // do not create edges for non-explicit exceptions (default: false)
+        omitExceptions: false
+    }
+);
 // cfg[0] is the start node
 // cfg[1] is the end node
 // cfg[2] is an array of all nodes for easier iteration
