@@ -2,7 +2,13 @@
   "name": "esgraph",
   "description": "creates a control flow graph from an esprima abstract syntax tree",
   "version": "0.2.2",
-  "keywords": ["AST", "abstract syntax tree", "esprima", "CFG", "control flow graph"],
+  "keywords": [
+    "AST",
+    "abstract syntax tree",
+    "esprima",
+    "CFG",
+    "control flow graph"
+  ],
   "main": "./lib",
   "bin": {
     "esgraph": "./bin/esgraph.js"
@@ -12,7 +18,7 @@
   ],
   "dependencies": {
     "espree": "^2.0.3",
-    "walkes": "^0.2.0"
+    "walkes": "git+https://github.com/jscrambler/walkes.git"
   },
   "devDependencies": {
     "istanbul": "*",
