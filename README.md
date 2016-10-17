@@ -2,13 +2,14 @@
 
 creates a control flow graph from an esprima abstract syntax tree
 
-[![Build Status](https://travis-ci.org/Swatinem/esgraph.png?branch=master)](https://travis-ci.org/Swatinem/esgraph)
-[![Coverage Status](https://coveralls.io/repos/Swatinem/esgraph/badge.png?branch=master)](https://coveralls.io/r/Swatinem/esgraph)
-[![Dependency Status](https://gemnasium.com/Swatinem/esgraph.png)](https://gemnasium.com/Swatinem/esgraph)
+[![Build Status](https://travis-ci.org/Swatinem/esgraph.svg?branch=master)](https://travis-ci.org/Swatinem/esgraph)
+[![Coverage Status](https://coveralls.io/repos/Swatinem/esgraph/badge.svg?branch=master)](https://coveralls.io/r/Swatinem/esgraph)
+[![Dependency Status](https://gemnasium.com/Swatinem/esgraph.svg)](https://gemnasium.com/Swatinem/esgraph)
 
 ## Installation
-
-    $ npm install esgraph
+```bash
+$ npm install esgraph
+```
 
 ## Usage
 
@@ -16,17 +17,18 @@ creates a control flow graph from an esprima abstract syntax tree
 
 The `esgraph` binary reads from stdin and outputs dot-format usable by graphviz.
 To create a png file showing the CFG of a js file:
-
-    $ cat $file | esgraph | dot -Tpng > output.png
+```
+$ cat $file | esgraph | dot -Tpng > output.png
+```
 
 ![example graph](esgraph.png?raw=true)
 
 ### library
 
 ```js
-var esgraph = require('esgraph');
+const esgraph = require('esgraph');
 
-var cfg = esgraph(esprima.parse(source, {range: true}));
+const cfg = esgraph(esprima.parse(source, {range: true}));
 // cfg[0] is the start node
 // cfg[1] is the end node
 // cfg[2] is an array of all nodes for easier iteration
@@ -43,7 +45,7 @@ node.false; // the next statement reached when `node.astNode` evaluates to false
 node.exception; // the next statement reached when `node.astNode` throws
 
 
-var dot = esgraph.dot(cfg, {counter: startCount, source: source});
+const dot = esgraph.dot(cfg, {counter: startCount, source: source});
 // returns the cfg printed in graphviz dot format.
 node.label // can be used to use a custom label for that node
 // otherwise `esgraph.dot` will print the nodes source when the ast is created
