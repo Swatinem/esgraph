@@ -29,14 +29,14 @@ n10 -> n8 []
 */
 
 switch (e) {
-	case 1:
-		expr1;
-	case 2:
-	case 3:
-		expr123;
-		break;
-	case 4:
-	case 5:
-	default:
-		expr45d;
+  case 1:
+    expr1;
+  case 2:
+  case 3:
+    expr123;
+    break;
+  case 4:
+  case 5:
+  default:
+    expr45d;
 }

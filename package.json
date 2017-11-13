@@ -7,23 +7,44 @@
   "bin": {
     "esgraph": "./bin/esgraph.js"
   },
-  "maintainers": [
-    "Arpad Borsos <arpad.borsos@googlemail.com> (http://swatinem.de)"
-  ],
+  "maintainers": ["Arpad Borsos <arpad.borsos@googlemail.com> (http://swatinem.de)"],
   "dependencies": {
-    "espree": "^3.3.2",
+    "espree": "^3.5.2",
     "walkes": "^0.2.0"
   },
   "devDependencies": {
-    "istanbul": "*",
-    "mocha": "*",
-    "should": "*",
-    "coveralls": "*",
-    "jshint": "*"
+    "coveralls": "^3.0.0",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "mocha": "^4.0.1",
+    "nyc": "^11.3.0",
+    "prettier": "^1.8.2",
+    "prettier-eslint-cli": "^4.4.0",
+    "should": "^13.1.3"
   },
   "scripts": {
-    "test": "make test-coveralls"
+    "test": "nyc mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "lint": "eslint .",
+    "format": "prettier-eslint --write \"**/*.{json,js}\""
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "env": {
+      "mocha": true
+    },
+    "rules": {
+      "no-restricted-syntax": "off",
+      "no-continue": "warn",
+      "no-use-before-define": ["error", { "functions": false }],
+      "no-param-reassign": "warn",
+      "no-shadow": "warn"
+    }
   },
   "repository": "git://github.com/Swatinem/esgraph.git",
-  "license": "LGPL-3.0"
+  "license": "LGPL-3.0",
+  "engines": {
+    "node": ">=8.0.0"
+  }
 }

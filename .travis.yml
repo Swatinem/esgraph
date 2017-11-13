@@ -3,13 +3,14 @@ sudo: false
 language: node_js
 
 node_js:
-  - 6
-  - 4
+  - node
+  - 8
 
 cache:
   directories:
     - node_modules
 
-install:
-  - npm i -g npm@latest
-  - npm install
+test:
+  - npm test
+  - npm run coverage
+  - npm run lint

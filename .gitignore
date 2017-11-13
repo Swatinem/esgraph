@@ -1,6 +1,7 @@
 node_modules
 components
 coverage
+.nyc_output
 npm-debug.log
 *.tgz
 *.patch

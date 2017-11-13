@@ -15,9 +15,9 @@ n4 -> n5 []
 n5 -> n6 [color="red", label="exception"]
 */
 try {
-	statement;
-	throw e;
+  statement;
+  throw e;
 } catch (e) {
-	rethrow;
-	throw e;
+  rethrow;
+  throw e;
 }

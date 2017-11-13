@@ -10,5 +10,5 @@ n1 -> n3 [label="false"]
 n2 -> n1 []
 */
 while (true) {
-	empty;
+  empty;
 }
