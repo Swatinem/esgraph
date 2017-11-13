@@ -7,5 +7,5 @@ n0 -> n1 []
 n1 -> n2 []
 */
 function t() {
-	return a;
+  return a;
 }

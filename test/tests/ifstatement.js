@@ -20,9 +20,9 @@ n6 -> n3 [label="false"]
 n7 -> n3 []
 */
 if (1) {
-	statement1;
+  statement1;
 } else if (2) {
-	statement2;
+  statement2;
 } else if (3) {
-	statementelse;
+  statementelse;
 }

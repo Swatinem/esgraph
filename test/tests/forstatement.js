@@ -27,13 +27,13 @@ n9 -> n7 []
 */
 
 for (; test;) {
-	empty;
+  empty;
 }
 
 for (; test; update) {
-	empty;
+  empty;
 }
 
 for (init; test; update) {
-	empty;
+  empty;
 }

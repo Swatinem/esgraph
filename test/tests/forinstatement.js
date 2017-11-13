@@ -16,8 +16,8 @@ n3 -> n5 [color="red", label="exception"]
 n4 -> n3 []
 */
 for (var i in {}) {
-	empty;
+  empty;
 }
 for (i in call()) {
-	empty;
+  empty;
 }

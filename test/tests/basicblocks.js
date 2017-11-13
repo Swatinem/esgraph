@@ -15,9 +15,8 @@ n4 -> n5 []
 */
 
 statement1;
-;
 (function () {});
 a = 1 + 2;
 {
-	block;
+  block;
 }

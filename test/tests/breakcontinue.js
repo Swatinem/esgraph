@@ -34,37 +34,34 @@ n9 -> n8 [label="false"]
 n11 -> n1 []
 */
 
-for (;; update) {
-	if (t)
-		break;
+for (; ; update) {
+  if (t) break;
 }
 
 for (i in i) {
-	break;
+  break;
 }
 
 do {
-	break;
+  break;
 } while (dotest);
 
 while (whiletest) {
-	break;
+  break;
 }
 
 for (; test;) {
-	continue;
+  continue;
 }
 
 for (i in i) {
-	continue;
+  continue;
 }
 
 do {
-	if (t)
-		continue;
+  if (t) continue;
 } while (dotest);
 
 while (whiletest) {
-	if (t)
-		continue;
+  if (t) continue;
 }
